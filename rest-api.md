@@ -1,5 +1,5 @@
 # IndiePitcher.com REST API Dodumentation
-IndiePitcher is an all in one tool for your software company to send transactional, marketing, or cold emails.
+IndiePitcher is an all in one tool for your software company to send transactional, marketing, or cold emails. Just plug in the email you already have. Sign up for free at https://indiepitcher.com
 
 ## Transactional Emails
 Transactional emails is a fancy name for sending emails such as "You've been invited to organization Another ChatGpt Wrapper Startup on IndiePitcher.com as an admin." or "Your invoice 123456 has been paid.". IndiePitcher provides an easy to use a company email you already have (integrated using STMP) to start sending highly customizable and personalized transactional emails. 
@@ -16,7 +16,7 @@ Here's what's currently supported:
 ### Raw Transactional Email
 
 ```bash
-curl -X POST https://api.indiepitcher.com/v1/email/send_raw
+curl -X POST https://api.indiepitcher.com/v1/email/transactional
    -H 'Content-Type: application/json'
    -H "Authorization: Bearer {YOUR API TOKEN}"
    -d '{"subject":"Welcome to IndiePitcher","body":"Your email content", "bodyType": "plaintext", "recipientEmail": "john@example.com", "category": "onboarding"}'
@@ -39,7 +39,7 @@ curl -X POST https://api.indiepitcher.com/v1/email/send_raw
 ### Transactional Email from Template
 
 ```bash
-curl -X POST https://api.indiepitcher.com/v1/email/send_from_template
+curl -X POST https://api.indiepitcher.com/v1/email/transactional/template
    -H 'Content-Type: application/json'
    -H "Authorization: Bearer {YOUR API TOKEN}"
    -d '{"templateId":"154ad6fa-3f22-49be-8e56-c8e3bfb02373","variables": {"firstName": "John"}, "recipientEmail": "john@example.com", "category": "onboarding"}'
