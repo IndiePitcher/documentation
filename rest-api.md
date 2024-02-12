@@ -14,6 +14,7 @@ Here's what's currently supported:
 - We make sure you don't send an email to an email that has unsubscribed so you don't have to
 
 ### Raw Transactional Email
+Send a custom email by providing the raw email subject and body.
 
 ```bash
 curl -X POST https://api.indiepitcher.com/v1/email/transactional
@@ -37,6 +38,7 @@ curl -X POST https://api.indiepitcher.com/v1/email/transactional
 ---
 
 ### Transactional Email from Template
+Send an email using a template you created on https://indiepitcher.com before, customized using `variables`. 
 
 ```bash
 curl -X POST https://api.indiepitcher.com/v1/email/transactional/template
