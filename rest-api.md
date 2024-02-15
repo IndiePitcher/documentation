@@ -23,6 +23,13 @@ curl -X POST https://api.indiepitcher.com/v1/email/transactional
    -d '{"subject":"Welcome to IndiePitcher","body":"Your email content", "bodyType": "plaintext", "recipientEmail": "john@example.com", "category": "onboarding"}'
 ```
 
+#### Unsubscribe
+One click unsubscribe is also supported, you can use a variable `{{unsubscribeLink}} in the `body` of your email to let your users unsubscribe for given category of emails.
+- Plaintext: `.... unsubscribe by opening {{unsubscribeLink}}`
+- Markdown: `.... [Unsubscribe]({{unsubscribeLink}})`
+- HTML: `.... <a href="{{unsubscribeLink}}">Unsubscribe</a>`
+
+#### Supporrted Properties
 | Property | Type | Is Required | Description
 | --- | --- | --- | --- |
 | subject | string | yes | The subject line of your email. |
