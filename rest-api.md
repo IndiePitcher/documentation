@@ -69,6 +69,15 @@ curl -X POST https://api.indiepitcher.com/v1/email/transactional/template
 
 ---
 
+## Contact List
+
+### Add contacts to a campaign
+TODO
+
+### Delete a contact from a campaign
+TODO
+
+---
 That's it for now, but there's a lot more to come, such as support for webhooks. Don't hesitate to reach out to petr@indiepitcher.com for any feedback, suggestions, bugs.
 
 
