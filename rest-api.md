@@ -26,6 +26,7 @@ curl -X POST https://api.indiepitcher.com/v1/email/transactional
 | Property | Type | Is Required | Description
 | --- | --- | --- | --- |
 | subject | string | yes | The subject line of your email. |
+| body | string | yes | The body of your email. |
 | bodyType | string | yes | Notifies us if the email body is a plaintext string, a markdown string we'll parse, or a raw html we'll just enrich by link tracking if requested and pass along. Accepted values are `plaintext`, `markdown`, `html`. Read bellow how to include a link to unsubscribe. |
 | recipientEmail | string | yes | The email of the recipient of this message |
 | category | string | no | You can group transactional emails into categories. This is useful for when a user taps unsubscibe, you can limit his unsibscribe only to emails for a given category. It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-). |
