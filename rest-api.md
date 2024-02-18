@@ -37,7 +37,7 @@ One click unsubscribe is also supported, you can use a variable `{{unsubscribeLi
 | bodyType | string | yes | Notifies us if the email body is a plaintext string, a markdown string we'll parse, or a raw html we'll just enrich by link tracking if requested and pass along. Accepted values are `plaintext`, `markdown`, `html`. Read bellow how to include a link to unsubscribe. |
 | recipientEmail | string | yes | The email of the recipient of this message |
 | category | string | no | You can group transactional emails into categories. This is useful for when a user taps unsubscibe, you can limit his unsibscribe only to emails for a given category. It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-). |
-| emailAccountId | string | no | You can integrate IndiePitcher with more than one email account. This property allows you to choose which account you want to send the email from. Omitting this value will pick one of your integrated accounts. |
+| fromEmail | string | no | You can integrate IndiePitcher with more than one email account. This property allows you to choose which account you want to send the email from. Omitting this value will pick one of your integrated accounts. |
 | rejectIfUnsubscribedForCategory | bool | no | Rejects to send the email if given user previously unsubscribed from receiving email for given category. Defaults to `true`. |
 | rejectIfUnsubscribedAnywhere | bool | no | Rejects to send the email if given user previously unsubscribed to any of your emails sent through IndiePitcher. Defaults to `false`. |
 | trackOpens | bool | no | Choose if you wish to track when the recipient opens your email (when available). Default value is `false`. This has no effect if if `bodyType` is set to `plaintext`. |
@@ -61,7 +61,7 @@ curl -X POST https://api.indiepitcher.com/v1/email/transactional/template
 | variables | string: string dictionary | no | Provide an array of variables to personalize the template with, such as the first name of the recipient. |
 | recipientEmail | string | yes | The email of the recipient of this message |
 | category | string | no | You can group transactional emails into categories. This is useful for when a user taps unsubscibe, you can limit his unsibscribe only to emails for a given category. It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-). |
-| emailAccountId | string | no | You can integrate IndiePitcher with more than one email account. This property allows you to choose which account you want to send the email from. Ommiting this value will pick one of your integrated accounts. |
+| fromEmail | string | no | You can integrate IndiePitcher with more than one email account. This property allows you to choose which account you want to send the email from. Ommiting this value will pick one of your integrated accounts. |
 | rejectIfUnsubscribedForCategory | bool | no | Rejects to send the email if given user previously unsubscribed from receiving email for given category. Defaults to `true`. |
 | rejectIfUnsubscribedAnywhere | bool | no | Rejects to send the email if given user previously unsubscribed to any of your emails sent through IndiePitcher. Defaults to `false`. |
 | trackOpens | bool | no | Choose if you wish to track when the recipient opens your email (when available). Default value is `false`. This has no effect if if `bodyType` is set to `plaintext`. |
